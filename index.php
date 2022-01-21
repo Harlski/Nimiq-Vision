@@ -32,11 +32,12 @@
         
             <div class="nq-card-header" id="connection-status">
                     <a class="nq-link" href="./fts.html"><img src="./img/placeholder.png" class='rounded' width='100%' max-width='500px' ></a>
-            </div>
-            <div class="nq-card-body">
-                    <p class="nq-text">
+
+            <div class="nq-text">
+                    <p>
                         <b>NIMIQ.VISION</b> allows you to accept <a href="https://nimiq.com" class="nq-link">$NIM</a> donations on your live stream!
                     </p>
+            </div>
             <center>
                 <p class="nq-text-s nq-label">
                     <a class="nq-link nq-button green" href="./fts.html">Get Started</a>
@@ -48,7 +49,7 @@
             </center>
 				
 	    	</div>
-            <!-- End NQ-Card-Body -->
+            <!-- End NQ-Card-Header -->
 		</div>
         <!-- End NQ-Card -->
 	</div>

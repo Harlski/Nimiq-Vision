@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
 	<script type="text/javascript" src="https://cdn.nimiq.com/latest/nimiq.js"></script>	
 	<script type="text/javascript" src="./scripts/handler.js"></script>
 	<script type="text/javascript" src="./scripts/nimiq.js"></script>
-	<link href="nimiq-style.min.css" rel="stylesheet">
+	<link href="./styles/nimiq-style.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Muli:400,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Mono&text=0123456789ABCDEFGHJKLMNPQRSTUVXY%20" rel="stylesheet">
     <title>Nimiq Vision</title>

@@ -2,31 +2,25 @@
 //Testing Wallet Address
 const userParams = window.location.search;
 const urlParams = new URLSearchParams(userParams);
-const userAddress = urlParams.get('id');
+const userAddress = urlParams.get('id'); // Gets the wallet address (id) & seconds to wait (secs) from the url. (eg. https://nimiq.vision/live.php?id=NQXX&secs=10)
 const timeToWait = urlParams.get('secs');
 
-console.log('User address is: ' + userAddress + '.');
-console.log('Time to wait is: ' + timeToWait);
-
-const iconURL = "https://icons.mopsus.com/icon/" + userAddress + ".svg";
+const iconURL = "https://icons.mopsus.com/icon/" + userAddress + ".svg"; // Thanks mopsus.com foor letting me leech the .svg image for now - still need to add/implement the identicons.min.js 
 let queArray = [];
 let activeAnim = false;
 
 function queuePopup(img, msg, value, seconds){
 	
-	let cleaned = filterFactory().filterString(msg); //Removes profanity
+	let cleaned = filterFactory().filterString(msg); // Removes profanity. Thanks https://github.com/MatthewDLudwig
 
-	arrayToAdd = [img, cleaned, value, seconds]; //Put values in an array
-	queArray.push(arrayToAdd); //Adds values to array
-	addToList(img, msg, value);
-	console.log("Transactions in queue: " + queArray.length);	
+	arrayToAdd = [img, cleaned, value, seconds]; // Put values in an array.
+	queArray.push(arrayToAdd); // Adds values to array.
+	addToList(img, msg, value); // Adds to donation history list.
 	statusQueue(queArray.length);
 	if (!activeAnim){
-		console.log("Attempting to play next.");
-		playNext();
+		playNext(); // activeAnim is false, which means nothing is on screen.
 	} else {
-		console.log("New transaction, though pop-up currently visible. Returning.");
-		return
+		return // Animation on screen, so we return.
 	}
 
 	}
@@ -35,20 +29,15 @@ function playNext(){
 	
 
 	if (queArray.length === 0){
-		console.log("Nothing left to play next. Queue empty.");
-		return
+		return // Nothing left to play next, exits.
 	}
-	console.log(queArray[0]);
-	secondsWithDelay = queArray[0][3] * 1000 + 3500;
-	activeAnim = true;
-	successModal(queArray[0][0],queArray[0][1],queArray[0][2],queArray[0][3]);
-	queArray.shift();
-	console.log("Transaction displayed, ending soon.");
-	console.log("Transactions in queue remaining: " + queArray.length);
-	statusQueue(queArray.length);
+	secondsWithDelay = queArray[0][3] * 1000 + 3500; // This number helps add 3.5 seconds between popups, allows animation to finish and close properly.
+	activeAnim = true; // While this is True, next donation in queue won't trigger.
+	successModal(queArray[0][0],queArray[0][1],queArray[0][2],queArray[0][3]); // successModal() populates template with data and displays on screen.
+	queArray.shift(); // Removes last item just displayed from queue.
+	statusQueue(queArray.length); // Updates the display of remaining items in queue.
 	setTimeout(function(){ 
-		console.log("Animation ended, attempting to play next.");
-		activeAnim = false;	
-		playNext()
+		activeAnim = false;	// Animation has closed from screen.
+		playNext() // Calls this function again
 	}, secondsWithDelay);
 }

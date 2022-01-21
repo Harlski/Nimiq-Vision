@@ -3,9 +3,7 @@ const container = document.querySelector(".payment-container");
 
 
 closeBtn.addEventListener("click", closeModal);
-//container.addEventListener("click", closeModal2);
 
-// Closes the modal when closeBtn is clicked
 function closeModal() {
   if (container.classList.contains("rem-modal")) {
   } else {
@@ -19,23 +17,7 @@ function closeModal() {
   }
 }
 
-// Closes the modal when the payment-container is clicked
-/* function closeModal2(e) {
-  if (e.target.classList.contains("payment-container")) {
-    if (container.classList.contains("rem-modal")) {
-      container.classList.remove("rem-modal");
-    } else {
-      container.classList.add("rem-modal");
-      setTimeout(() => {
-        container.style.display = "none";
-      }, 500);
-      setTimeout(() => {
-        document.querySelector("body").style.overflow = "visible";
-      }, 600);
-    }
-  }
-  return;
-} */
+
 
 /**
  * Opens the modal when the launch button is clicked(optional)
@@ -86,28 +68,6 @@ function successModal(img, msg, value, seconds) {
     }
 
 
-    // if (msg.length > 14) {
-    //   console.log("longer than 25");
-    //   let current = 0;
-    //   let newMsg = msg;
-    //   while (current <= msg.length){
-    //     count = 0;
-    //     if (msg.substr(current) == ' '){
-    //       count = 0;
-    //     } else {
-    //       count++;
-    //     }
-    //     if (count == 14){
-    //       msg = msg.substr(current - 14, current) + ' ' + msg.substr(current + 1,msg.legnth);
-    //       count = 0;
-    //     }
-
-    //     if (msg.substr(current) == msg.length){
-    //       msg_input.textContent = msgSplit;
-    //     }
-    //   }
-    // }
-
     if (container) {
       setTimeout(() => {
         container.classList.add("rem-modal");
@@ -120,6 +80,3 @@ function successModal(img, msg, value, seconds) {
     }
   }
 }
-
-// Calls the function to trigger the modal
-queuePopup(iconURL,"This is what your message will look like on an incoming transaction ",1000,10);

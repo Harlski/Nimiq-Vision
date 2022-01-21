@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+	<link rel="stylesheet" href="./styles/history.css" />
 	<script type="text/javascript" src="https://cdn.nimiq.com/latest/nimiq.js"></script>	
 	<script type="text/javascript" src="./scripts/handler.js"></script>
 	<script type="text/javascript" src="./scripts/nimiq.js"></script>
@@ -33,87 +34,16 @@
     }
 
 	function testPopup() {
-	queuePopup("https://icons.mopsus.com/icon/NQ86AS33MTP87Q22FDVLYNARJNAEG0GMGXGN.svg","This is what your message will look like on an incoming transaction ",1000,timeToWait);
+	queuePopup("https://icons.mopsus.com/icon/NQ86AS33MTP87Q22FDVLYNARJNAEG0GMGXGN.svg","This is what an incoming donation alert will look like",1000,5);
 	}
 	</script>
-	<style>
-		li {
-			list-style: none;
-			background: #fff;
-			color: #fff;
-			padding: 0 0.5em;
-			overflow: hidden;
-			width: 10em;
-            height: 3.35em;
-            /* background-color: green; */
-            /* display: flex; */
-            flex-direction: column;
-            justify-content: center;
-			/* background: var(--nimiq-gold);
-			background-image: var(--nimiq-gold-bg); */
-			border-radius: 20px;
-			/* box-shadow: 0 0.5rem 3.5rem rgb(129 119 173 / 47%); */
-			border: 1px solid black;
-		}
-		
-
-		li.show {
-			/* height: 3.35em; */
-			margin: 3px 0;
-		}
-
-		li.show:hover {
-			height: 12em;
-		}
-
-		.list {
-			position: absolute;
-			z-index: 1;
-		}
-		.swing li {
-		margin: 15px;
-		opacity: 0;
-		transform: rotateX(-90deg); */
-		transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
-		}
-
-		.swing li.show {
-		opacity: 1;
-		transform: none;
-		transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
-		}
-
-		.liFont {
-			font-size: 0.75em;
-		}
-		.dImg{
-			position: relative;
-			padding-top: 0.75px;
-		}
-		#show:hover .dImgr{
-			padding-top: 0px;
-			position: relative;
-			transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
-		}
-		.dValue{
-			padding-top: 15px;
-			/* padding-right: 10px; */
-			float: right;
-			color: #00B000;
-		}
-		.dMsg{
-			color: #000;
-		}
-		
-
-</style>
   </head>
   <body>
 
 	<div class="payment-container rem-modal">
-	<?php include 'animation.html';?> 
-
+		<?php include 'animation.html';?> 
 	</div>
+
 	<div class="list">
 		<ul id="list" class="swing">
 		</ul>

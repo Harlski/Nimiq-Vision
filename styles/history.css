@@ -34,7 +34,7 @@ li.show:hover {
 .swing li {
 margin: 15px;
 opacity: 0;
-transform: rotateX(-90deg); */
+transform: rotateX(-90deg); 
 transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
 

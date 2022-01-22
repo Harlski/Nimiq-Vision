@@ -1,6 +1,5 @@
 
-
-// Handles On Click
+// list.js adds incoming transactions to a history list on the live.php page.
 function addToList(id, msg, value) {
     var list = document.getElementById('list'); //Lists current <ul> & <il>
     var newLI = document.createElement('li'); 

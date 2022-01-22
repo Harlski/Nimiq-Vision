@@ -131,10 +131,3 @@ function filterFactory(replaceWith = "", words = [], options = { }) {
 }
 
 filterFactory().addAllToFilter(words = profan);
-// function cleanText(text, badWords, replaceWith) {
-
-//     return badWords.reduce((t, c) => {
-//     console.log("at cleanText: " + t.split(new RegExp(c.split("-").join("\\-").split("_").join("\\_").split("!").join("\\!").split("+").join("\\+").split("*").join("\\*").split("").join("\\s*"), "i")).join(replaceWith));
-//       return t.split(new RegExp(c.split("").join("\\s*").split("-").join("\\-").split("_").join("\\_").split("!").join("\\!").split("+").join("\\+").split("*").join("\\*"), "i")).join(replaceWith);
-//     }, text)
-//   }

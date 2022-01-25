@@ -11,7 +11,7 @@ Nimiq.Vision utilizes the Nimiq Blockchain to detect when incoming transactions 
 
 <h1><b>Quick Start</b></h1>
 
-https://nimiq.vision?live.php?id=NQ97UQJA5V6KPRFYX9X0J2ASCK5R0C8QU04H&secs=30<br>
+https://nimiq.vision/live.php?id=NQ97UQJA5V6KPRFYX9X0J2ASCK5R0C8QU04H&secs=30<br>
  <p>Simply replace the NQ97UQJA5V6KPRFYX9X0J2ASCK5R0C8QU04H with your own wallet.nimiq.com address.<br></p>
   
  Visit https://nimiq.vision/fts.html if you require step-by-step setup instructions.

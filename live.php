@@ -30,7 +30,6 @@
 	function statusQueue(text) {
 		msg = text + " in queue";
         document.getElementById('in-queue').textContent = msg;
-        console.log(msg);
     }
 
 	function testPopup() {

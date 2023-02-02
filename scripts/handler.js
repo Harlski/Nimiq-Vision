@@ -15,7 +15,7 @@ function queuePopup(img, msg, value, seconds){
 
 	arrayToAdd = [img, cleaned, value, seconds]; // Put values in an array.
 	queArray.push(arrayToAdd); // Adds values to array.
-	addToList(img, msg, value); // Adds to donation history list.
+	// addToList(img, msg, value); // Adds to donation history list.
 	statusQueue(queArray.length);
 	if (!activeAnim){
 		playNext(); // activeAnim is false, which means nothing is on screen.

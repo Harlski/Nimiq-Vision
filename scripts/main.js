@@ -37,6 +37,38 @@ function openModal() {
  * @param {length of time the success modal should appear} seconds
  */
 function successModal(img, msg, value, seconds) {
+  function renderIdenticons(text) {
+    console.log("got renderI");
+    document.querySelectorAll('.identicons:not(.small)').forEach((e, i) => Identicons.render(text + (i === 0 ? '' : i), e));
+
+    // for testing render the small identicons as image
+    // document.querySelectorAll('.identicons.small').forEach((e, i) => Identicons.image(text + i)
+    //     .then($img => {
+    //         e.textContent = ''; // clear old content
+    //         e.appendChild($img);
+    //     }));
+}
+
+function addSpaces(address){   
+
+  if (address == ''){
+      console.log("Got here");
+      return "NQ97 4M1T 4TGD VC7F LHLQ Y2DY 425N 5CVH M02Y";
+  }
+
+  let newAddress = address.replace(/\s/g, ''); //Remove all spaces from string input
+  let spaceAddress = ""; 
+  for (let i=0;i<newAddress.length;i++){
+      if(i == 3 || i == 7 || i == 11 || i == 15 || i ==  19 || i == 23 || i == 27 || i == 31){
+          spaceAddress = spaceAddress + newAddress[i] + " ";
+      } else {
+          spaceAddress = spaceAddress + newAddress[i];
+      }
+  }
+  console.log("spaceAddress:" + spaceAddress);
+  return spaceAddress
+}
+
   // Triggers the succes modal
   const myAudio = new Audio('audio/pop-sound-incoming.wav');
   openModal();
@@ -48,7 +80,8 @@ function successModal(img, msg, value, seconds) {
   // condition to pop the success modal
   // condition can be changed
   if (img && msg && value) {
-    user_img.src = img;
+    console.log("got img msg value: " + img);
+    renderIdenticons(addSpaces(img));
     msg_input.textContent = msg;
     received_val.textContent = value;
 
@@ -80,3 +113,4 @@ function successModal(img, msg, value, seconds) {
     }
   }
 }
+

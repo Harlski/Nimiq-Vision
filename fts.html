@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://nimiq.github.io/nimiq-style/src/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,600,700">
     <link rel="stylesheet" href="./styles/fts.css"></style>
+    <link href="./scripts/src/demo.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1RF3XNFTS8"></script>
@@ -61,9 +62,9 @@
 							<a class="nq-link" href="https://wallet.nimiq.com">	wallet.nimiq.com
 							</a> and paste it below.
 					</p></br>
-					<center><p>
+					<center><br><div id="words"><div id="words-text"></div></div><div class="identicons" id="identicons"></div><br>
 						<div class="hint" aria-label="Transactions to this address will trigger a donation alert">Paste your wallet address:</div><br>
-                            <input class="nq-input" placeholder="NQ00 0000 0000 0000" value="" id="walletName" onchange="CreateURL();"><br>
+                            <input class="nq-input" placeholder="NQ97 4M1T 4TGD VC7F LHLQ Y2DY 425N 5CVH M02Y" value="" id="walletName" onchange="CreateURL();"><br>
 						<div class="hint" aria-label="This will be how long your donation alert stays on-screen">Enter popup duration:</div><br>
                             <input class="nq-input" placeholder="30" value="30" onchange="CreateURL();" id="secondsName"></p><br>
                     </center>
@@ -83,6 +84,6 @@
 	</div>
     <!-- End Content -->
 
-
+    <script type="module" src="./scripts/src/demo.js"></script>
 </body>
 </html>

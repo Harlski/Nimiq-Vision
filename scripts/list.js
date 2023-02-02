@@ -4,7 +4,7 @@ function addToList(id, msg, value) {
     var list = document.getElementById('list'); //Lists current <ul> & <il>
     var newLI = document.createElement('li'); 
     var newImg = document.createElement('img');
-    //console.log(newLI);
+    console.log(newLI);
 
     var listLength = document.getElementById('list').getElementsByTagName('li').length //Counts how many items are in the list
     newImg.setAttribute("src", id);

@@ -20,7 +20,7 @@
 
 	  gtag('config', 'G-1RF3XNFTS8');
 	</script>
-    <!-- End Google Analytics -->
+    <!-- End Google Analytics --> 
 </head>
 
   <body>
